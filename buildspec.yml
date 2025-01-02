@@ -9,12 +9,14 @@ phases:
   build:
     commands:
       - echo Building NGINX
-      - cp index.html /var/www/html/
+      - mkdir -p /var/www/html/
+      - cp ./index.html /var/www/html/
   post_build:
     commands:
       - echo Configuring NGINX
-      - systemctl restart nginx
+      - nginx -t || echo "NGINX configuration test failed"
+      - nginx
 
 artifacts:
   files:
-    - '**/*'
+    - output/index.html
