@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First CodeBuiild</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Static Website</title>
+  <style>
+    /* General Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    header nav ul li a:hover {
+      color: #f4f4f4;
+    }
+
+    /* Main Content Styling */
+    main {
+      padding: 30px 0;
+    }
+
+    .section {
+      margin: 20px 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Button Styling */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h1>First Deploy on aws</h1>
-    <p>Nice!!</p>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Welcome to My Static Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <section id="home" class="section">
+      <div class="container">
+        <h2>Home Section</h2>
+        <p>This is a sample static page created with HTML, CSS, and JavaScript. Customize it as needed!</p>
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Section</h2>
+        <p>Here, you can describe your website, your mission, or anything relevant to your audience.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Section</h2>
+        <p>Feel free to reach out to us!</p>
+        <p>Email: example@example.com</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 My Static Website</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript to change the background color when the button is clicked
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = document.body.style.backgroundColor === 'lightblue' ? '#f4f4f4' : 'lightblue';
+    }
+  </script>
+
 </body>
 </html>
