@@ -57,6 +57,35 @@
       padding: 10px;
       margin-top: 20px;
     }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    /* Add some styling for the form in the Contact section */
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
@@ -87,6 +116,14 @@
     <h1>Contact Us</h1>
     <p>You can reach us at <a href="mailto:contact@example.com">contact@example.com</a>.</p>
     <p>Feel free to ask any questions!</p>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button onclick="sendMessage()">Send Message</button>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -106,6 +143,19 @@
       // Show the selected page
       const activePage = document.getElementById(pageId);
       activePage.classList.add('active');
+    }
+
+    // Function to handle form submission
+    function sendMessage() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (name && email && message) {
+        alert(`Message sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      } else {
+        alert('Please fill in all fields.');
+      }
     }
   </script>
 
